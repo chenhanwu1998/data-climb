@@ -40,17 +40,17 @@ public class DataClimbRunner implements ApplicationRunner {
      */
     @Override
     public void run(ApplicationArguments args) {
-//        log.info("系统初始化之后执行");
-//        deviceCompanyTypeService.climbCpmpanyTypeInfo();
-//        log.info("结束获取company基础信息");
-//        deviceBasicInfoService.climbDeviceBasicInfo();
-//        log.info("结束获取基础信息");
-//        deviceParamService.climbDeviceDetailAndParam();
-//        log.info("获取详情参数结束");
-//        devicePerformanceService.climbPerformance();
-//        log.info("获取性能参数结束");
-//        deviceCommentService.climbComment();
-//        log.info("获取评论结束");
+        log.info("系统初始化之后执行");
+        deviceCompanyTypeService.climbCpmpanyTypeInfo();
+        log.info("结束获取company基础信息");
+        deviceBasicInfoService.climbDeviceBasicInfo();
+        log.info("结束获取基础信息");
+        deviceParamService.climbDeviceDetailAndParam();
+        log.info("获取详情参数结束");
+        devicePerformanceService.climbPerformance();
+        log.info("获取性能参数结束");
+        deviceCommentService.climbComment();
+        log.info("获取评论结束");
     }
 
 }

@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae13e196-fecc-44ac-91e2-fb09bb741be0" name="Default Changelist" comment="" />
+    <list default="true" id="ae13e196-fecc-44ac-91e2-fb09bb741be0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/projectInfo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/mobile.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/error.2023-04-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/error.2023-04-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/data-climb/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/info.2023-04-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/info.2023-04-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/data-climb/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/data-climb/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chw/climb/DataClimbRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chw/climb/DataClimbRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +31,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="3c6d0397-d374-4bd0-a4f2-459471589b19" />
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\software\apache-maven-3.6.3" />
+        <option name="mavenHome" value="D:/software/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\software\apache-maven-3.6.3\conf\settings-myown.xml" />
       </MavenGeneralSettings>
     </option>
@@ -31,29 +47,35 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2N2skvKFwnoI2ChZ6uaoT0HsqyV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/document/ideaProject/data-climb&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/document/ideaProject/data-climb/sql",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\document\ideaProject\data-climb\sql" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.chw.service.impl" />
       <recent name="com.chw.service" />
@@ -179,10 +201,22 @@
       <workItem from="1703125798971" duration="313000" />
       <workItem from="1706630803864" duration="2352000" />
       <workItem from="1708393758917" duration="617000" />
+      <workItem from="1712653639887" duration="4326000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
