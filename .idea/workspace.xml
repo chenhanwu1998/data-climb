@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae13e196-fecc-44ac-91e2-fb09bb741be0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="3c6d0397-d374-4bd0-a4f2-459471589b19" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\software\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\software\apache-maven-3.6.3\conf\settings-myown.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2N2skvKFwnoI2ChZ6uaoT0HsqyV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/document/ideaProject/data-climb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chw.service.impl" />
+      <recent name="com.chw.service" />
+      <recent name="com.chw.mapper" />
+      <recent name="com.chw.thread" />
+      <recent name="com.chw.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ClimbApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataClimbLhc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chw.climb.DataClimbLhc" />
+      <module name="data-climb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chw.climb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeviceDetailClimb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chw.climb.DeviceDetailClimb" />
+      <module name="data-climb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chw.climb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chw.thread.SingleThreadPool" />
+      <module name="data-climb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chw.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chw.thread.ThreadPool" />
+      <module name="data-climb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chw.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClimbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="data-climb" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chw.ClimbApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ClimbApplication" />
+        <item itemvalue="Application.DataClimbLhc" />
+        <item itemvalue="Application.DeviceDetailClimb" />
+        <item itemvalue="Application.SingleThreadPool" />
+        <item itemvalue="Application.ThreadPool" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae13e196-fecc-44ac-91e2-fb09bb741be0" name="Default Changelist" comment="" />
+      <created>1678873658863</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678873658863</updated>
+      <workItem from="1678873660410" duration="10931000" />
+      <workItem from="1678928891336" duration="34237000" />
+      <workItem from="1679058936138" duration="2133000" />
+      <workItem from="1679274295483" duration="11188000" />
+      <workItem from="1679361300940" duration="17499000" />
+      <workItem from="1679403583278" duration="5681000" />
+      <workItem from="1679448029886" duration="6465000" />
+      <workItem from="1679533134583" duration="3604000" />
+      <workItem from="1680597267656" duration="12999000" />
+      <workItem from="1680933542971" duration="14313000" />
+      <workItem from="1681021171594" duration="1023000" />
+      <workItem from="1681306337321" duration="5805000" />
+      <workItem from="1681348128802" duration="1749000" />
+      <workItem from="1681434838305" duration="267000" />
+      <workItem from="1681871718223" duration="1272000" />
+      <workItem from="1681954488459" duration="665000" />
+      <workItem from="1683704304768" duration="1829000" />
+      <workItem from="1702700059345" duration="2293000" />
+      <workItem from="1703124835012" duration="45000" />
+      <workItem from="1703125798971" duration="313000" />
+      <workItem from="1706630803864" duration="2352000" />
+      <workItem from="1708393758917" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

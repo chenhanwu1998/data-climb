@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306?serverTimezone=GMT%2B8
+    username: root
+    password: root
+  application:
+    name: data-climb
+server:
+  port: 8088
+mybatis-plus:
+  configuration:
+    ### 开启打印sql配置
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    ### 开启驼峰配置
+    map-underscore-to-camel-case: true

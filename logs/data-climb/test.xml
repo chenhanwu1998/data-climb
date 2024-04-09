@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<process version="5.3.015">
+    <operator activated="true" class="process" compatibility="5.3.015" expanded="true" name="Process">
+        <process expanded="true">
+            <operator activated="true" class="generate_macro" compatibility="5.3.015" expanded="true" height="60"
+                      name="Generate Macro" width="90" x="45" y="45">
+                <list key="function_descriptions"></list>
+            </operator>
+            <operator activated="true" class="spark_nest" compatibility="5.3.015" expanded="true" height="60"
+                      name="Spark Nest" width="90" x="112" y="75">
+                <parameter key="connection" value="local"></parameter>
+                <process expanded="true">
+                    <!-- 选择除hive之外的数据源 -->
+                    <operator aliasname="Read DB" name="Read DB" activated="true" compatibility="5.3.015"
+                              expanded="true" height="28" width="140" x="366" y="96" class="load_db">
+                        <!-- 向导式是固定的 -->
+                        <parameter key="define_query" value="query"></parameter>
+                        <parameter key="use_default_schema" value="true"></parameter>
+                        <parameter key="define_connection" value="predefined"></parameter>
+                        <!-- 数据库库名 -->
+                        <parameter key="schema_name" value="ocr_gz_xiaohong"></parameter>
+                        <!-- 连接的数据源id -->
+                        <parameter key="connection" value="50030"></parameter>
+                        <!-- 查询sql,后端提供接口 -->
+                        <parameter
+                                key="query"
+                                value="select FEATURE_0,FEATURE_16,FEATURE_17,FEATURE_14,FEATURE_15,FEATURE_12,FEATURE_13,FEATURE_10,FEATURE_11,FEATURE_8,FEATURE_7,FEATURE_6,FEATURE_5,AREA_CODE,FEATURE_4,FEATURE_3,FEATURE_2,STAT_MONTH,FEATURE_1,FEATURE_9,TARGET1,FEATURE_18,FEATURE_19 from ocr_gz_xiaohong.PRE_220819030623823 where 1 = 1 and STAT_MONTH in (202205) and AREA_CODE in (2000250,1000250,320105,1025022,1025024,1000510,1051048,1051632,1051938)"
+                        ></parameter>
+                        <parameter key="partition_column_name" value="userkey"></parameter>
+                        <parameter key="partition_data_size" value="100000"></parameter>
+                    </operator>
+                    <operator aliasname="Set Role" name="Set Role" activated="true" compatibility="5.3.015"
+                              expanded="true" height="28" width="140" x="340" y="134" class="set_role">
+                        <!-- 目标字段code,应用为动态调用后端接口获取的主键 -->
+                        <parameter key="attribute_name" value="TARGET1"></parameter>
+                        <!-- 向导式是固定的 -->
+                        <parameter key="target_role" value="label"></parameter>
+                        <list key="set_additional_roles"></list>
+                    </operator>
+                    <operator aliasname="Auto Prepare" name="Auto Prepare" activated="true" compatibility="5.3.015"
+                              expanded="true" height="28" width="140" x="349" y="205" class="auto_prepare_data">
+                        <parameter key="missColumnFilter" value="true"></parameter>
+                        <parameter key="missRateThreshold" value="0.95"></parameter>
+                        <parameter key="missNumericalValueFillMethod" value="zero"></parameter>
+                        <parameter key="missNominalValueFillMethod" value="value"></parameter>
+                    </operator>
+                    <operator aliasname="Auto Model" name="Auto Model" activated="true" compatibility="5.3.015"
+                              expanded="true" height="28" width="140" x="360" y="296" class="auto_ml">
+                        <!-- 模型类型 分类,回归-->
+                        <parameter key="model_type" value="binary_classification"></parameter>
+                        <!-- 向导式固定,算法多选-->
+                        <parameter key="classifications" value="Subset"></parameter>
+                        <!-- 评估指标 -->
+                        <parameter key="classification_scoring" value="recall"></parameter>
+                        <!-- 向导式固定,迭代次数 -->
+                        <parameter key="generations" value="5"></parameter>
+                        <!-- 测试集比例-->
+                        <parameter key="test_set_ratio" value="0.3"></parameter>
+                        <!-- 分类算法-->
+                        <parameter key="candidate_classification_algorithms" value="DecisionTreeClassifier"></parameter>
+                        <!-- 框架类型 -->
+                        <parameter key="framework" value="nni"></parameter>
+                    </operator>
+                    <operator aliasname="Correlation Matrix" name="Correlation Matrix" activated="true"
+                              compatibility="5.3.015" expanded="true" height="28" width="140" x="504" y="178"
+                              class="correlation_matrix_spark">
+                        <parameter key="method" value="spearman"></parameter>
+                    </operator>
+                    <operator aliasname="Sample" name="Sample" activated="true" compatibility="5.3.015" expanded="true"
+                              height="28" width="140" x="508" y="80" class="spark_sample">
+                        <parameter key="balance_data" value="true"></parameter>
+                        <!-- 抽样比例-->
+                        <list key="sample_ratio_per_class">
+                            <parameter key="1" value="0.34557495484647804"></parameter>
+                            <parameter key="0" value="1"></parameter>
+                        </list>
+                    </operator>
+                    <operator aliasname="Feature Function Transform" name="Feature Function Transform" activated="true"
+                              compatibility="5.3.015" expanded="true" height="28" width="140" x="350" y="245"
+                              class="function_transform">
+                        <!-- 不写该参数，则默认选输入数据集里数值类非特殊角色字段，建议不写 -->
+                        <!-- <parameter key="attributes" value="|Outlook|Play|Wind"></parameter> -->
+                        <!-- 算法，分别为 boxcox 和 yeojohnson，默认 yeojohnson，此处固定写 yeojohnson -->
+                        <parameter key="algorithm" value="yeojohnson"></parameter>
+                        <!-- 是否保存原始字段，即保存被转换前的特征，如果为false，则不会输出，默认固定写true -->
+                        <parameter key="save_original_features" value="false"></parameter>
+                    </operator>
+                    <connect from_op="Read DB" from_port="output" to_op="Set Role"
+                             to_port="example set input"></connect>
+
+                    <connect from_op="Set Role" from_port="example set output" to_op="Sample"
+                             to_port="example set input"></connect>
+                    <connect from_op="Sample" from_port="example set output" to_op="Auto Prepare"
+                             to_port="example set input"></connect>
+                    <connect from_op="Auto Prepare" from_port="example set output" to_op="Correlation Matrix"
+                             to_port="example set"></connect>
+                    <connect from_op="Correlation Matrix" from_port="example set" to_op="Feature Function Transform"
+                             to_port="example set input"></connect>
+                    <connect from_op="Feature Function Transform" from_port="example set output" to_op="Auto Model"
+                             to_port="training set"></connect>
+
+                    <portspacing port="source_input 1" spacing="0"></portspacing>
+                    <portspacing port="source_input 2" spacing="0"></portspacing>
+                    <portspacing port="sink_output 1" spacing="0"></portspacing>
+                    <portspacing port="sink_output 2" spacing="0"></portspacing>
+                </process>
+            </operator>
+            <connect from_op="Generate Macro" from_port="through 1" to_op="Spark Nest" to_port="input 1"></connect>
+            <portspacing port="source_input 1" spacing="0"></portspacing>
+            <portspacing port="sink_result 1" spacing="0"></portspacing>
+        </process>
+    </operator>
+</process>
